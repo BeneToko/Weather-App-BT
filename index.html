@@ -13,72 +13,92 @@
     />
     <script src="https://unpkg.com/axios@1.1.2/dist/axios.min.js"></script>
     <link rel="stylesheet" href="src/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cutive+Mono&display=swap"
+      rel="stylesheet"
+    />
   </head>
   <body>
     <div class="container">
       <div class="weather-app-wrapper">
-        <div class="weather-app">
-          <form id="search-form" class="mb-3">
-            <div class="row">
-              <div class="col-9">
-                <input
-                  type="search"
-                  placeholder="Type a city..."
-                  class="form-control"
-                  id="city-input"
-                  autocomplete="off"
-                />
-              </div>
-              <div class="col-3">
-                <input
-                  type="submit"
-                  value="search"
-                  class="btn btn-primary w-100"
-                />
-              </div>
-            </div>
-          </form>
-          <div class="overview">
-            <h1 id="city"></h1>
-            <ul>
-              <li>Last updated: <span id="date"></span></li>
-              <li id="description">Clear</li>
-            </ul>
-          </div>
-          <div class="row">
-            <div class="col-6">
-              <div class="d-flex weather-temperature">
-                <img
-                  src="https://ssl.gstatic.com/onebox/weather/64/sunny.png"
-                  alt="Clear"
-                  class="float-left"
-                  id="icon"
-                />
-                <div class="float-left">
-                  <strong id="temperature"></strong>
-                  <span class="units">°C </span>
+        <div class="video-wrapper">
+          <video
+            autoplay
+            muted
+            loop
+            class="background-video"
+            id="video-background"
+          >
+            <source
+              src="src\coverr-flying-birds-animation-6922-1080p.mp4"
+              type="video/mp4"
+            />
+          </video>
+          <div class="weather-app">
+            <form id="search-form" class="mb-3">
+              <div class="row">
+                <div class="col-9">
+                  <input
+                    type="search"
+                    placeholder="Type a city..."
+                    class="form-control"
+                    id="city-input"
+                    autocomplete="off"
+                  />
+                </div>
+                <div class="col-3">
+                  <input
+                    type="submit"
+                    value="search"
+                    class="btn btn-primary w-100"
+                  />
                 </div>
               </div>
-            </div>
-            <div class="col-6">
+            </form>
+            <div class="overview">
+              <h1 id="city"></h1>
               <ul>
-                <li>Humidity: <span id="humidity"></span>%</li>
-                <li>Wind: 2 km/h</li>
+                <li>Last updated: <span id="date"></span></li>
+                <li id="description">Clear</li>
               </ul>
             </div>
-          </div>
-          <div class="weather-forecast" id="forecast">
             <div class="row">
-              <div class="col-2">
-                <div class="weather-forecast-date">Wednesday</div>
-                <img
-                  src="http://shecodes-assets.s3.amazonaws.com/api/weather/icons/broken-clouds-night.png"
-                  alt=""
-                  width="42"
-                />
-                <div class="weather-forecast-temperatures">
-                  <span class="weather-forecast-temperature-max"> 18° </span>
-                  <span class="weather-forecast-temperature-min"> 12° </span>
+              <div class="col-6">
+                <div class="d-flex weather-temperature">
+                  <img
+                    src="https://ssl.gstatic.com/onebox/weather/64/sunny.png"
+                    alt="Clear"
+                    class="float-left"
+                    id="icon"
+                  />
+                  <div class="float-left">
+                    <strong id="temperature"></strong>
+                    <span class="units">°C </span>
+                  </div>
+                </div>
+              </div>
+              <div class="col-6">
+                <ul>
+                  <li>Humidity: <span id="humidity"></span>%</li>
+                  <li>Wind: 2 km/h</li>
+                </ul>
+              </div>
+            </div>
+            <div class="weather-forecast" id="forecast">
+              <div class="row">
+                <div class="col-2">
+                  <div class="weather-forecast-date">Wednesday</div>
+                  <img
+                    src="http://shecodes-assets.s3.amazonaws.com/api/weather/icons/broken-clouds-night.png"
+                    alt=""
+                    width="42"
+                  />
+                  <div class="weather-forecast-temperatures">
+                    <span class="weather-forecast-temperature-max"> 18° </span>
+                    <span class="weather-forecast-temperature-min"> 12° </span>
+                  </div>
                 </div>
               </div>
             </div>
